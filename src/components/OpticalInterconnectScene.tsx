@@ -1,4 +1,4 @@
-import React, { useRef, useState, useMemo } from 'react';
+import React, { useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { OrbitControls, Text, Environment, ContactShadows, Float, Stars } from '@react-three/drei';
 import * as THREE from 'three';
@@ -46,7 +46,7 @@ const LayerMesh = ({
     const mesh = useRef<THREE.Mesh>(null);
     const [hovered, setHover] = useState(false);
 
-    useFrame((state) => {
+    useFrame(() => {
         if (mesh.current) {
             // Gentle floating animation
             mesh.current.rotation.y += 0.005;

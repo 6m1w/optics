@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayerData, OpticalStackData } from '../data/opticalStack';
+import { OpticalStackData } from '../data/opticalStack';
 
 interface LayerInfoPanelProps {
     data: OpticalStackData;
